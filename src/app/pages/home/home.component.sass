@@ -1,0 +1,227 @@
+.banner
+    background: url("/assets/img/banner-bg.png") no-repeat center bottom
+    background-size: contain
+    h2
+        max-width: 450px
+    .banner-btn
+        background: linear-gradient(45deg, #3da, #1b8, #085, #3da)
+        background-size: 400%
+        border: none
+        border-radius: 10px
+        padding: 10px 15px
+        color: #fff
+        font-weight: bolder
+        font-size: .8rem
+        box-shadow: 2px 5px 5px #ccc
+    .banner-btn:hover
+        animation: bannerbtn 1s
+    .resume-animation
+        .green
+            background: #afa
+            border-radius: 10px
+            border: solid 1px #6f6
+            font-size: .8rem
+            opacity: 0
+            position: relative
+            animation-name: greenfadein
+            animation-duration: 20s
+            animation-iteration-count: infinite
+        .red
+            background: #faa
+            border-radius: 10px
+            border: solid 1px #f66
+            font-size: .8rem
+            opacity: 0
+            position: relative
+            animation-name: redfadein
+            animation-duration: 20s
+            animation-iteration-count: infinite
+        .yellow
+            background: #ffa
+            border-radius: 10px
+            border: solid 1px #ff6
+            font-size: .8rem
+            opacity: 0
+            position: relative
+            animation-name: yellowfadein
+            animation-duration: 20s
+            animation-iteration-count: infinite
+        .img-resume
+            box-shadow: 2px 0px 15px #000
+            animation: shadow 5s infinite
+    .featured
+        color: #fff
+        button
+            background: transparent
+            text-transform: uppercase
+            font-weight: bolder
+            color: #fff
+            border: solid #fff 1px
+            box-shadow: 5px 5px
+            width: 100%
+.effort
+    .center-box
+        background: #dfe
+        p
+            font-size: .8rem
+            line-height: 14px
+
+.resume-slide
+    background: url("/assets/img/template-banner.svg") no-repeat
+    background-size: 120%
+    background-position: center bottom
+    .para
+        max-width: 500px
+    .slider
+        -webkit-appearance: none
+        width: 100%
+        height: 5px
+        background: #fff
+        outline: none
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            appearance: none
+            width: 25px
+            height: 25px
+            background: #3ea
+            box-shadow: 0 0 5px
+            border-radius: 50%
+            cursor: pointer
+
+        &::-moz-range-thumb
+            width: 25px
+            height: 25px
+            background: #3ea
+            box-shadow: 0 0 5px
+            border-radius: 50%
+            cursor: pointer
+.started
+    background: #666
+    p 
+        max-width: 500px
+    .banner-btn
+        background: linear-gradient(45deg, #3da, #1b8, #085, #3da)
+        background-size: 400%
+        border: none
+        border-radius: 10px
+        padding: 10px 15px
+        color: #fff
+        font-weight: bolder
+        font-size: .8rem
+        box-shadow: 0 0 5px #000
+    .banner-btn:hover
+        animation: bannerbtn 1s        
+
+.calc
+    background: #000    
+
+.how-works
+    background-image: linear-gradient(#3da, #1b8,)        
+    p
+        max-width: 500px
+.footer
+    background: black
+    ul
+        padding: 0
+        li
+            list-style: none
+            a 
+                color: white
+                margin: 5px 0
+footer
+    background: black
+    border-top: 1px solid white
+    .col
+        padding: 15px
+        .fa
+            border: solid 2px
+            height: 40px
+            width: 40px
+            border-radius: 50%
+            padding: 10px
+            color: white
+
+@keyframes greenfadein
+    0%
+        opacity: 0
+        left: 500px
+
+    2%
+        opacity: 0
+
+    5%
+        opacity: 1
+        left: 0
+
+    90%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@keyframes yellowfadein
+    0%
+        opacity: 0
+        left: -500px
+
+    5%
+        opacity: 0
+
+    12%
+        opacity: 1
+        left: 0
+
+    90%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@keyframes redfadein
+    0%
+        opacity: 0
+        left: 500px
+
+    5%
+        opacity: 0
+
+    20%
+        opacity: 1
+        left: 0
+
+    90%
+        opacity: 1
+
+    100%
+        opacity: 0
+
+@keyframes shadow
+    0%
+        box-shadow: 0
+    50%
+        box-shadow: 5px 5px 5px
+    100%
+        box-shadow: 0
+
+@keyframes bannerbtn
+    0%
+        background-position: 0%
+    50%
+        background-position: 100%
+    100%
+        background-position: 0%
+
+@media only screen and (max-width: 600px)
+    .featured
+        background: #1b8
+        text-align: center
+        .col-md-2
+            margin: 5px
+            button
+                box-shadow: 5px 5px
+    .resume-slide
+        background: #1b8
+
+    .started        
+        .text-right
+            text-align: initial !important
