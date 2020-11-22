@@ -7,20 +7,29 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ResumeTemplateComponent } from './pages/resume-template/resume-template.component';
+import { CoverLetterComponent } from './pages/cover-letter/cover-letter.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FooterComponent } from './components/footer/footer.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ResumeTemplateComponent
+    ResumeTemplateComponent,
+    CoverLetterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CarouselModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

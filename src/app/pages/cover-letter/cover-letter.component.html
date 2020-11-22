@@ -3,26 +3,27 @@
     <div class="row">
       <div class="col-md-7">
         <div class="d-flex build-now flex-column ">
-          <h2>Job-ready Professional Resume Templates</h2>
+          <h2>How to write Cover letter to
+            pair with your Resume</h2>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
             et dolore magna aliqua. Ut enim ad minim veniam,</p>
           <h4>Try LOREM IPSUM. <br>
-            Pick from FREE Resume Templates</h4>
+            Pick from FREE Cover letter Templates</h4>
           <div class="mt-4">
-            <button class="btn">BUILD MY RESUME NOW</button>
+            <button class="btn text-uppercase">BUILD MY Cover letter NOW</button>
           </div>
         </div>
       </div>
       <div class="col-md-5">
-        <img class="img-fluid" src="assets/img/resume-banner-img.png" alt="">
+        <img class="img-fluid" src="assets/img/c-banner-svg.png" alt="">
       </div>
     </div>
   </div>
 </div>
-<div class="what-is-resume">
+<div class="what-is-cover-letter">
   <div class="container p-5">
-    <h2 class="text-center mb-4">What is a Resume?</h2>
+    <h2 class="text-center mb-4">What is a Cover Letter?</h2>
     <p class="lead">
       A resume is a formal document that a job applicant creates to itemize his or her
       qualifications for a position.
@@ -34,31 +35,67 @@
     </p>
   </div>
 </div>
-<div class="writing-a-resume" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
+<div class="writing-a-cover-letter" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
   <div class="container pt-5 px-5 text-white text-center">
-    <h2 class="text-center mb-4">Writing a Resume</h2>
-    <img class="img-fluid" src="assets/img/writing-res-pic.svg" alt="Writing a Resume">
+    <h2 class="text-center mb-4">Writing a Cover Letter</h2>
+    <img class="img-fluid" src="assets/img/writing-a-cover-letter.jpg" alt="Writing a Resume">
   </div>
 </div>
 
 <div class="browse">
   <div class="container p-5">
-    <h2 class="font-weight-bold">Browse our templates, and make the best
-      resume for you</h2>
+    <h2 class="font-weight-bold">Struggling to write a perfect Cover Letter,
+      Browse our professional templates</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
       et dolore magna aliqua. Ut enim ad minim veniam,
     </p>
-    <h3>Resumes</h3>
-    <h5>Freshers/Students </h5>
+    <h3>Cover Letter</h3>
+    <h5>Experienced</h5>
     <hr>
     <div class="row">
-      <div class="display-4 bg-warning col-12 text-center" *ngIf="!resumeTemplateList">Loading...</div>
-      <div *ngFor="let item of resumeTemplateList;" class="col-md-3 mb-3">
+      <div class="col-md-3">
         <div class="browse-bow pb-3 px-3 position-relative">
-          <h5 class="font-weight-bold">{{item.title}}</h5>
-          <p>{{item.description}}</p>
-          <img class="img-fluid" src="{{item.image}}" alt="{{item.image}}">
+          <h5 class="font-weight-bold">Lorem Ipsum</h5>
+          <p>quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea</p>
+          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
+          <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
+            <button class="btn">Preview</button>
+            <button class="btn mt-3">Use template</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="browse-bow pb-3 px-3 position-relative">
+          <h5 class="font-weight-bold">Lorem Ipsum</h5>
+          <p>quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea</p>
+          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
+          <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
+            <button class="btn">Preview</button>
+            <button class="btn mt-3">Use template</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="browse-bow pb-3 px-3 position-relative">
+          <h5 class="font-weight-bold">Lorem Ipsum</h5>
+          <p>quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea</p>
+          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
+          <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
+            <button class="btn">Preview</button>
+            <button class="btn mt-3">Use template</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="browse-bow pb-3 px-3 position-relative">
+          <h5 class="font-weight-bold">Lorem Ipsum</h5>
+          <p>quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea</p>
+          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
           <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
             <button class="btn">Preview</button>
             <button class="btn mt-3">Use template</button>
@@ -99,7 +136,7 @@
         </ul>
       </div>
       <div class="col-md-6 p-5">
-        <img src="assets/img/why-us.svg" class="img-fluid" alt="choose us">
+        <img src="assets/img/why-us-coverletter.png" class="img-fluid" alt="choose us">
       </div>
     </div>
   </div>
@@ -108,7 +145,7 @@
   <div class="container p-5">
     <h2 class="font-weight-bold text-center text-white">What Experts say about us </h2>
     <div class="row">
-      <owl-carousel-o [options]="customOptions">
+      <owl-carousel-o>
         <ng-template carouselSlide>Slide 1</ng-template>
         <ng-template carouselSlide>Slide 2</ng-template>
         <ng-template carouselSlide>Slide 3</ng-template>
@@ -118,62 +155,62 @@
 </div>
 <div class="faq">
   <div class="container p-5">
-    <h2 class="font-weight-bold text-center">FAQs about Resumes </h2>
+    <h2 class="font-weight-bold text-center">FAQs about Cover Letters</h2>
     <div class="row mt-5">
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
+        <h5>What should I include on my cover letter? </h5>
+        <p>Everyone’s cover letter will include different things due to varying work experience
+          and qualifications. However, if you’re wondering what to put on your cover letter,
           there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
+        <p>At a minimum, cover letters must have the following standard components: </p>
         <ul>
           <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
+          <li> cover letter introduction</li>
+          <li> cover letter education section</li>
           <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
+          <li> Relevant cover letter skills & certifications</li>
         </ul>
       </div>
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
+        <h5>What should I include on my cover letter? </h5>
+        <p>Everyone’s cover letter will include different things due to varying work experience
+          and qualifications. However, if you’re wondering what to put on your cover letter,
           there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
+        <p>At a minimum, cover letters must have the following standard components: </p>
         <ul>
           <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
+          <li> cover letter introduction</li>
+          <li> cover letter education section</li>
           <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
+          <li> Relevant cover letter skills & certifications</li>
         </ul>
       </div>
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
+        <h5>What should I include on my cover letter? </h5>
+        <p>Everyone’s cover letter will include different things due to varying work experience
+          and qualifications. However, if you’re wondering what to put on your cover letter,
           there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
+        <p>At a minimum, cover letters must have the following standard components: </p>
         <ul>
           <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
+          <li> cover letter introduction</li>
+          <li> cover letter education section</li>
           <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
+          <li> Relevant cover letter skills & certifications</li>
         </ul>
       </div>
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
+        <h5>What should I include on my cover letter? </h5>
+        <p>Everyone’s cover letter will include different things due to varying work experience
+          and qualifications. However, if you’re wondering what to put on your cover letter,
           there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
+        <p>At a minimum, cover letters must have the following standard components: </p>
         <ul>
           <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
+          <li> cover letter introduction</li>
+          <li> cover letter education section</li>
           <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
+          <li> Relevant cover letter skills & certifications</li>
         </ul>
       </div>
 
@@ -182,9 +219,9 @@
 </div>
 <div class="confused" style="background-image: url(assets/img/browse-ex-bg.svg);">
   <div class="container p-5 text-white text-center">
-    <h2 class="font-weight-bold ">Still confused, where to start </h2>
-    <p class="text-center">Get inspired by what 10000+ professionals put on their resumes </p>
-    <button class="btn m-3">Browse Resume Examples </button>
+    <h2 class="font-weight-bold ">Never settle for less than perfect </h2>
+    <p class="text-center">Explore what other professionals put in their cover letters </p>
+    <button class="btn m-3">Browse Cover Letter Examples </button>
   </div>
 </div>
 <div class="faq-list">

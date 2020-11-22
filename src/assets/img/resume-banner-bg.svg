@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2033.333" height="806" viewBox="0 0 2033.333 806">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.147" y1="-0.115" x2="0.586" y2="-0.863" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00fbae"/>
+      <stop offset="1" stop-color="#00c280"/>
+    </linearGradient>
+  </defs>
+  <path id="resume_banner" data-name="resume banner" d="M0,2675.764l1981.818-200.129V1906.061H-51.515v806Z" transform="translate(51.515 -1906.061)" fill="url(#linear-gradient)"/>
+</svg>
