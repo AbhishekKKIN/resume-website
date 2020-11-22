@@ -12,8 +12,13 @@ export class DataService {
     this.APIEndpoint = environment.baseUrl;
   }
 
-getResumeTemplate(){
-  return this.http.get(this.APIEndpoint + 'base-templates');
-}
+  getResumeTemplate() {
+    return this.http.get(this.APIEndpoint + 'base-templates');
+  }
+
+  getFaqs() {
+    return this.http.get(this.APIEndpoint + 'faqs');
+  }
+
 
 }

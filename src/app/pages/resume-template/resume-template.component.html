@@ -2,13 +2,13 @@
   <div class="container p-5">
     <div class="row">
       <div class="col-md-7">
-        <div class="d-flex build-now flex-column ">
-          <h2>Job-ready Professional Resume Templates</h2>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam,</p>
-          <h4>Try LOREM IPSUM. <br>
-            Pick from FREE Resume Templates</h4>
+        <div class="d-flex build-now flex-column">
+          <h2>Flaunt your CV with Print CV's resume template builder!</h2>
+          <p>Ever wonder, How do you sell yourself on CV to stay ahead of the race? </p>
+          <h4>Print CV template builder is a perfect solution to solve this age old problem.</h4>
+          <h6>Select your career level -Select a template that meets your requirements - Fill out your details -
+            Download </h6>
+          <h5>Print CV Challenge :- Make your dream CV in less than 5 minutes. Give it a try. It's Free!</h5>
           <div class="mt-4">
             <button class="btn">BUILD MY RESUME NOW</button>
           </div>
@@ -20,27 +20,6 @@
     </div>
   </div>
 </div>
-<div class="what-is-resume">
-  <div class="container p-5">
-    <h2 class="text-center mb-4">What is a Resume?</h2>
-    <p class="lead">
-      A resume is a formal document that a job applicant creates to itemize his or her
-      qualifications for a position.
-    </p>
-    <p class="lead">
-      A resume is usually accompanied by a customized cover letter in which the applicant
-      expresses an interest in a specific job or company and draws attention to the most relevant
-      specifics on the resume.
-    </p>
-  </div>
-</div>
-<div class="writing-a-resume" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
-  <div class="container pt-5 px-5 text-white text-center">
-    <h2 class="text-center mb-4">Writing a Resume</h2>
-    <img class="img-fluid" src="assets/img/writing-res-pic.svg" alt="Writing a Resume">
-  </div>
-</div>
-
 <div class="browse">
   <div class="container p-5">
     <h2 class="font-weight-bold">Browse our templates, and make the best
@@ -60,11 +39,59 @@
           <p>{{item.description}}</p>
           <img class="img-fluid" src="{{item.image}}" alt="{{item.image}}">
           <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
-            <button class="btn">Preview</button>
+            <button class="btn" data-toggle="modal" data-target="#exampleModal"
+              (click)="previewTemplate(item._id)">Preview</button>
             <button class="btn mt-3">Use template</button>
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Preview</h5>
+              <button class="btn text-uppercase">customize now</button>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mt-1">
+              <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                    aria-controls="home" aria-selected="true"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    aria-controls="profile" aria-selected="false"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                    aria-controls="contact" aria-selected="false"></a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <img class="img-fluid border" src="https://printcv.s3.us-east-2.amazonaws.com/Template1-min.png"
+                    alt="">
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <img class="img-fluid border" src="https://printcv.s3.us-east-2.amazonaws.com/Template2-min.png"
+                    alt="">
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <img class="img-fluid border" src="https://printcv.s3.us-east-2.amazonaws.com/Template3-min.png"
+                    alt="">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="row justify-content-center mt-4">
       <button class="btn">View all templates</button>
@@ -72,29 +99,73 @@
   </div>
 </div>
 
-<div class="why-us" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
+
+<!-- <div class="what-is-resume">
+  <div class="container p-5">
+    <h2 class="text-center mb-4">What is a Resume?</h2>
+    <p class="lead">
+      A resume is a formal document that a job applicant creates to itemize his or her
+      qualifications for a position.
+    </p>
+    <p class="lead">
+      A resume is usually accompanied by a customized cover letter in which the applicant
+      expresses an interest in a specific job or company and draws attention to the most relevant
+      specifics on the resume.
+    </p>
+  </div>
+</div> -->
+<div class="writing-a-resume" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
+  <div class="container pt-5 px-5 text-white text-center">
+    <h2 class="text-center mb-4">Writing a Resume</h2>
+    <img class="img-fluid" src="assets/img/writing-res-pic.svg" alt="Writing a Resume">
+  </div>
+</div>
+
+
+<!-- <div class="why-us" style="background-image: url(assets/img/writing-a-resume-bg.svg);"> -->
+<div class="why-us bg-dark">
   <div class="container p-5">
     <h2 class="font-weight-bold text-center">Why choose us? </h2>
     <div class="row">
       <div class="col-md-6 p-5">
         <ul class="p-0">
           <li>
-            <h3>Lorem Ipsum Dolor </h3>
-            <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .</p>
+            <h3>By the Industry for the Industry </h3>
+            <p>Print CV is built by the industry and for the industry. From the recruiters from the United States to HR
+              managers in the UK and from freelance consultants from the Middle east to start-up founders in India have
+              contributed to the development of core products. We precisely understand what key decision makes actually
+              look at the time of hiring. Print CV is not just about look and feel but also about structure, symmetry
+              and discovery of the complete story of you. </p>
           </li>
           <li>
-            <h3>Lorem Ipsum Dolor </h3>
-            <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .</p>
+            <h3> What you pay is value and not price</h3>
+            <p>We just don't just offer price transparency but we prove it!
+              We have flat pricing. There are no hidden costs. We don't flash pricing when you are about to download
+              your CV.
+              We don't have a pop up on our website which says " Pay XXX to download".
+            </p>
+            <p>
+              Also, we won't chase you over emails or phone calls to pay to finish your CV. Your data is safe with us.
+              Print CV is free. You can test as many designs as you want. There are no bottlenecks.
+            </p>
           </li>
           <li>
-            <h3>Lorem Ipsum Dolor </h3>
-            <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .</p>
+            <h3> ATS compliant CV Builder</h3>
+            <p>Print CV is built over application tracking system (ATS). ATS allows recruiters to store a database of
+              suitable candidates. Most recruiters make use of ATS to find and organize CVs. The CV's built over Print
+              CV applications are ATS compliant. . ATS with the recruiters can find your CV made with Print CV resume
+              builder. </p>
+          </li>
+          <li>
+            <h3> We are storytellers</h3>
+            <p>34% of the Best of the recruiters have complained to us that they could not find the Best candidate in
+              the industry just because the Best candidate lacked the art of writing the Best CV. How to write the best
+              CV? Something we always ever wonder. We either copy paste or ask someone for help.
+            </p>
+            <p>
+              Print CV resume template builder tries to solve this problem with our resume writing solution.
+              Simply select your career level and we will script your story. Our AI will build a CV. Now, don't Scribble
+              - Rub - then Scratch!</p>
           </li>
         </ul>
       </div>
@@ -104,7 +175,154 @@
     </div>
   </div>
 </div>
-<div class="experts">
+<div class="faq">
+  <div class="container p-5">
+    <h2 class="font-weight-bold text-center">FAQs about Resumes </h2>
+    <div class="row mt-5">
+      <div class="col-md-6 pb-3">
+        <h5> Why do I need a good resume? </h5>
+        <p>Mr. Darnell Taylor (Recruiter at QTS Janitorial Services)
+        </p>
+        <p>
+          - Every candidate should walk a mile in the recruiter's shoe to answer this question. A recruiter gets
+          hundreds and thousands of applications every single day.
+          At times I need to fill up the positions at a decent pace so that there are no bottlenecks.
+        </p>
+        <p>
+          It may sound so simple but it is a tough job in the end. I need to make tough choices and rely on my
+          instincts. At times I get less than 120 seconds to screen a CV.
+        </p>
+        <p>
+          For me a good resume has got structure and symmetry. It is simple yet appealing.
+          Boost your chances to get hired with a good resume.
+        </p>
+        <p>
+          Please refer to Darnell's 10 tips for writing a good resume.
+        </p>
+
+      </div>
+      <div class="col-md-6 pb-3">
+        <h5> What is an objective in a resume? Why is it important? </h5>
+        <p>Mr. Carlos from Constructium
+        </p>
+        <p>
+          The first thing I look for in a resume is: Objective.
+          The career objective tells us more about the candidate. We like people with specific and well defined career
+          objectives.
+          At times we come across career objectives with too many "And"s. They want to do this and this and that! We
+          tend to avoid interviewing such candidates.
+          You have to be specific.
+        </p>
+        <p>
+          Here's how to write an objective for a resume.
+        </p>
+      </div>
+      <div class="col-md-6 pb-3">
+        <h5> What should be the length of the CV?</h5>
+        <p>Adubi Emmanuel from Nigeria
+        </p>
+        <p>
+          - What is the ideal length while writing your resume? Be it a fresher or an executive level candidate it is
+          predominantly the most common question.
+          Well it depends! is the right answer.
+        </p>
+        <p>
+          To me people having less than 5 years of experience can very well sum up everything in a single page.
+          The length of your CV depends upon responsibilities you share. Also you should write specific skills.
+        </p>
+        <p>
+          Here are the outcomes of the poll we have conducted so as to find the ideal length of a resume.
+        </p>
+      </div>
+      <div class="col-md-6 pb-3">
+        <h5> What should I add in my resume?</h5>
+        <p>Jerry recruiter at Showflipper
+        </p>
+        <p>
+          I would like to divide your resume into two parts : Must have sections and ETC sections.
+        </p>
+        <p>
+          Must have sections in your resume
+        </p>
+
+        <ul>
+          <li> Summary and Objective
+          </li>
+          <li> Contact details, email likewise
+          </li>
+          <li> Profession and educational history
+          </li>
+          <li> Key Achievements
+          </li>
+        </ul>
+
+        <p>
+
+          ETC section in your resume
+        </p>
+        <ul>
+          <li>Hobbies</li>
+          <li> Extra curricular
+          </li>
+          <li> Awards and recognition
+          </li>
+          <li> Event participation
+          </li>
+          <li> Voluntary work
+          </li>
+          <li> References
+          </li>
+        </ul>
+        <p>
+          When you put extra curricular, hobbies, events etc in your resume you should make an attempt to support your
+          claim in the main section.
+          You might have won a marathon and also an essay writing competition. If you are applying for a content writing
+          post, mentioning about an essay writing competition will be more advantageous than having won a marathon.
+        </p>
+        <p>
+          Everything in the ETC section has to be specific. It is also perfectly fine if you haven't done any voluntary
+          work or won any award. We should avoid putting it just for the sake of it. The ETC section kind of connects
+          the dots for recruiters. We can get into the psychographics of the candidate.
+        </p>
+      </div>
+      <div class="col-md-6 pb-3">
+        <h5> How to format a resume?</h5>
+        <p>Jasmine at Drap Daily</p>
+        <p>ATS should be able to track your resume. There is no rocket science. Follow KISS (Keep it Simple, Silly)
+          principal.
+          There is no perfect format however one must stick to following basic guidelines while formating their resumes.
+        </p>
+        <ol>
+          <li> Even margins on all four sides. </li>
+          <li> Font consistency. Avoid Italics, underlines and too or too small fonts. 11-12-13 are decent and most
+            acceptable font sizes. Verdana, Times New Roman and Arial are considered as good font types. If you are a
+            graphic designer it is perfectly fine if you use font types and sizes other than the standard ones. </li>
+          <li> Paragraph and line spacing. 1.5 line spacing is fine.</li>
+          <li> Don't make your resume too lengthy or too small. Have full sentences and also avoid short forms. </li>
+          <li> Photos are not required. At times they may hurt your chances. Images may make file size heavy and most
+            recruiters don't accept files above 1 MB.</li>
+        </ol>
+        <p>Please refer to the perfect formatting section on our website. </p>
+      </div>
+      <div class="col-md-6 pb-3">
+        <h5> What is the best resume template?</h5>
+        <p>Janet answered this question in the following manner. </p>
+        <p>Each to their own. Some recruiters think the best resume template is the one which is highly creative, and
+          has vibrant colors. For some recruiters a resume should be clean, neat and simple. Personally, I don't like
+          dark templates as I mostly hire management level candidates albeit my colleague who does hiring for a leading
+          graphic design firm generally invites those candidates who have got dark colors, big images and designs on
+          their resumes. </p>
+        <p>For me you need to understand what post you are applying for and what color may suit your kind of resume.
+          You make the template best. There is no best template otherwise. So, choose it wisely!
+        </p>
+        <p>Need help in understanding which may be the best template for your resume? Click here. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="experts">
   <div class="container p-5">
     <h2 class="font-weight-bold text-center text-white">What Experts say about us </h2>
     <div class="row">
@@ -116,138 +334,27 @@
     </div>
   </div>
 </div>
-<div class="faq">
-  <div class="container p-5">
-    <h2 class="font-weight-bold text-center">FAQs about Resumes </h2>
-    <div class="row mt-5">
-      <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
-          <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
-        </ul>
-      </div>
-      <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
-          <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
-        </ul>
-      </div>
-      <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
-          <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
-        </ul>
-      </div>
-      <div class="col-md-6 pb-3">
-        <h5>What should I include on my resume? </h5>
-        <p>Everyone’s resume will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your resume,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, resumes must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> Resume introduction</li>
-          <li> Resume education section</li>
-          <li> Work experience</li>
-          <li> Relevant resume skills & certifications</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</div>
 <div class="confused" style="background-image: url(assets/img/browse-ex-bg.svg);">
   <div class="container p-5 text-white text-center">
     <h2 class="font-weight-bold ">Still confused, where to start </h2>
     <p class="text-center">Get inspired by what 10000+ professionals put on their resumes </p>
     <button class="btn m-3">Browse Resume Examples </button>
   </div>
-</div>
+</div> -->
 <div class="faq-list">
   <div class="container pb-5 px-5">
     <h2>FAQs about Templates </h2>
     <div class="list shadow p-3">
       <div id="accordionExample">
-        <div>
-          <div id="headingOne">
-            <h6 class=" font-weight-bold">
-              <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </span>
+        <div class="display-4 bg-warning text-center" *ngIf="!faqsList">Loading...</div>
+        <div class="p-2 border-bottom border-light" *ngFor="let item of faqsList; index as i;">
+          <div id="heading{{i}}">
+            <h6 class="font-weight-bold m-0" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
+              {{item.question}} <i class="fa fa-angle-down float-right"></i>
             </h6>
           </div>
-          <div id="collapseOne" class="collapse" data-parent="#accordionExample">
-            <div class="">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div>
-          <div id="headingTwo">
-            <h6 class=" font-weight-bold">
-              <span data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </span>
-            </h6>
-          </div>
-          <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
-            <div class="">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div>
-          <div id="headingThree">
-            <h6 class=" font-weight-bold">
-              <span data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-                aria-controls="collapseThree">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </span>
-            </h6>
-          </div>
-          <div id="collapseThree" class="collapse" data-parent="#accordionExample">
-            <div class="">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
+          <div id="collapse{{i}}" class="collapse" data-parent="#accordionExample">
+            <div class="">{{item.answer}} </div>
           </div>
         </div>
       </div>
