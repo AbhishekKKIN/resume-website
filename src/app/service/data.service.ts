@@ -16,8 +16,12 @@ export class DataService {
     return this.http.get(this.APIEndpoint + 'base-templates');
   }
 
-  getFaqs() {
-    return this.http.get(this.APIEndpoint + 'faqs');
+  getCoverLetters() {
+    return this.http.get(this.APIEndpoint + 'base-cover-letters');
+  }
+
+  getFaqs(param) {
+    return this.http.get(this.APIEndpoint + 'faq/' + param);
   }
 
 

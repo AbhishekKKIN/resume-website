@@ -11,10 +11,6 @@ p
     background-position-y: bottom
     .build-now
         color: white
-        h2
-            max-width: 400px
-        p
-            max-width: 700px
 .what-is-cover-letter
     p 
         font-size: 1.5rem
@@ -30,15 +26,45 @@ p
         background: #dfe
         h5
             color: initial
+            transition: 1s
         img 
             box-shadow: 2px 2px 5px #777
             border-radius: 5px
         .hover
-            display: none    
-    .browse-bow:hover
-        .hover 
             top: 0
-            display: flex
+            transition: 1s
+            opacity: 0   
+    .browse-bow:hover
+        h5 
+            color: #1b8
+        .hover 
+            opacity: 1
+    .modal-content
+        background: none    
+        border: none        
+        .modal-header
+            background: #fff
+            border-radius: 30px
+            .btn
+                padding: 0.1rem 1rem
+            .close
+                background: #1b8
+                font-size: 2rem
+                padding: .5rem
+                border-radius: 20px
+                height: 30px
+                width: 30px
+                line-height: 0
+                margin: initial
+        .modal-body
+            background: #fff
+            border-radius: 10px                
+            .nav-link
+                background: #1b89
+                border-radius: 10px
+                border: none
+            .nav-link.active
+                background: #1b8
 .why-us
     h2, ul
         color: #1b8
@@ -53,3 +79,9 @@ p
     background-position-y: bottom    
     p 
         font-size: 1.4rem
+.faq-list
+    h6
+        cursor: pointer
+        .fa
+            font-size: 30px
+            line-height: 0.5

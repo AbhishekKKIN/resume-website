@@ -32,7 +32,10 @@
     <h5>Freshers/Students </h5>
     <hr>
     <div class="row">
-      <div class="display-4 bg-warning col-12 text-center" *ngIf="!resumeTemplateList">Loading...</div>
+      <div class="display-4 bg-danger text-center col-12" *ngIf="!internet">
+        <i class="fa fa-exclamation-circle"></i> No internet
+      </div>
+      <div class="display-4 bg-warning text-center col-12" *ngIf="!resumeTemplateList && internet">Loading...</div>
       <div *ngFor="let item of resumeTemplateList;" class="col-md-3 mb-3">
         <div class="browse-bow pb-3 px-3 position-relative">
           <h5 class="font-weight-bold">{{item.title}}</h5>
@@ -346,7 +349,10 @@
     <h2>FAQs about Templates </h2>
     <div class="list shadow p-3">
       <div id="accordionExample">
-        <div class="display-4 bg-warning text-center" *ngIf="!faqsList">Loading...</div>
+        <div class="display-4 bg-danger text-center" *ngIf="!internet">
+          <i class="fa fa-exclamation-circle"></i> No internet
+        </div>
+        <div class="display-4 bg-warning text-center" *ngIf="!faqsList && internet">Loading...</div>
         <div class="p-2 border-bottom border-light" *ngFor="let item of faqsList; index as i;">
           <div id="heading{{i}}">
             <h6 class="font-weight-bold m-0" data-toggle="collapse" [attr.data-target]="'#collapse' + i">

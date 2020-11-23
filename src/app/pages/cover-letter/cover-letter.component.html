@@ -3,13 +3,9 @@
     <div class="row">
       <div class="col-md-7">
         <div class="d-flex build-now flex-column ">
-          <h2>How to write Cover letter to
-            pair with your Resume</h2>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam,</p>
-          <h4>Try LOREM IPSUM. <br>
-            Pick from FREE Cover letter Templates</h4>
+          <h2>Need a professional and an attention grabbing cover letter? Look no further. </h2>
+          <h4 class="mt-3">Print CV is your one stop destination for the coolest cover letter. Try one of our free cover
+            letter templates and get your next interview call. </h4>
           <div class="mt-4">
             <button class="btn text-uppercase">BUILD MY Cover letter NOW</button>
           </div>
@@ -19,26 +15,6 @@
         <img class="img-fluid" src="assets/img/c-banner-svg.png" alt="">
       </div>
     </div>
-  </div>
-</div>
-<div class="what-is-cover-letter">
-  <div class="container p-5">
-    <h2 class="text-center mb-4">What is a Cover Letter?</h2>
-    <p class="lead">
-      A resume is a formal document that a job applicant creates to itemize his or her
-      qualifications for a position.
-    </p>
-    <p class="lead">
-      A resume is usually accompanied by a customized cover letter in which the applicant
-      expresses an interest in a specific job or company and draws attention to the most relevant
-      specifics on the resume.
-    </p>
-  </div>
-</div>
-<div class="writing-a-cover-letter" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
-  <div class="container pt-5 px-5 text-white text-center">
-    <h2 class="text-center mb-4">Writing a Cover Letter</h2>
-    <img class="img-fluid" src="assets/img/writing-a-cover-letter.jpg" alt="Writing a Resume">
   </div>
 </div>
 
@@ -54,54 +30,67 @@
     <h5>Experienced</h5>
     <hr>
     <div class="row">
-      <div class="col-md-3">
+      <div class="display-4 bg-danger text-center col-12" *ngIf="!internet">
+        <i class="fa fa-exclamation-circle"></i> No internet
+      </div>
+      <div class="display-4 bg-warning text-center col-12" *ngIf="!coverletterList && internet">Loading...</div>
+      <div *ngFor="let item of coverletterList;" class="col-md-3 mb-3">
         <div class="browse-bow pb-3 px-3 position-relative">
-          <h5 class="font-weight-bold">Lorem Ipsum</h5>
-          <p>quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea</p>
-          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
+          <h5 class="font-weight-bold">{{item.title}}</h5>
+          <p>{{item.description}}</p>
+          <img class="img-fluid" src="{{item.image}}" alt="{{item.image}}">
           <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
-            <button class="btn">Preview</button>
+            <button class="btn" data-toggle="modal" data-target="#exampleModal">Preview</button>
             <button class="btn mt-3">Use template</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="browse-bow pb-3 px-3 position-relative">
-          <h5 class="font-weight-bold">Lorem Ipsum</h5>
-          <p>quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea</p>
-          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
-          <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
-            <button class="btn">Preview</button>
-            <button class="btn mt-3">Use template</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Preview</h5>
+              <button class="btn text-uppercase">customize now</button>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body mt-1">
+              <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                    aria-controls="home" aria-selected="true"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                    aria-controls="profile" aria-selected="false"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                    aria-controls="contact" aria-selected="false"></a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <img class="img-fluid border" src="https://printcv.s3.us-east-2.amazonaws.com/Template1-min.png"
+                    alt="">
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <img class="img-fluid border" src="https://printcv.s3.us-east-2.amazonaws.com/Template2-min.png"
+                    alt="">
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <img class="img-fluid border" src="https://printcv.s3.us-east-2.amazonaws.com/Template3-min.png"
+                    alt="">
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="browse-bow pb-3 px-3 position-relative">
-          <h5 class="font-weight-bold">Lorem Ipsum</h5>
-          <p>quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea</p>
-          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
-          <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
-            <button class="btn">Preview</button>
-            <button class="btn mt-3">Use template</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="browse-bow pb-3 px-3 position-relative">
-          <h5 class="font-weight-bold">Lorem Ipsum</h5>
-          <p>quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea</p>
-          <img class="img-fluid" src="assets/img/resume1.png" alt="resume">
-          <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
-            <button class="btn">Preview</button>
-            <button class="btn mt-3">Use template</button>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div class="row justify-content-center mt-4">
       <button class="btn">View all templates</button>
@@ -109,29 +98,40 @@
   </div>
 </div>
 
-<div class="why-us" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
+
+<div class="writing-a-cover-letter" style="background-image: url(assets/img/writing-a-resume-bg.svg);">
+  <div class="container pt-5 px-5 text-white text-center">
+    <h2 class="text-center mb-4">Writing a Cover Letter</h2>
+    <img class="img-fluid" src="assets/img/writing-a-cover-letter.jpg" alt="Writing a Resume">
+  </div>
+</div>
+
+
+<div class="why-us bg-dark">
   <div class="container p-5">
-    <h2 class="font-weight-bold text-center">Why choose us? </h2>
+    <h2 class="font-weight-bold text-center">Why Print CV is world's best Cover letter template builder? </h2>
     <div class="row">
       <div class="col-md-6 p-5">
         <ul class="p-0">
           <li>
-            <h3>Lorem Ipsum Dolor </h3>
-            <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .</p>
+            <h3> Hassle-free cover template builder </h3>
+            <p>Print CV is hassle free and easy to use; no matter what your career level is. Get your cover letter in
+              less than 5 minutes. </p>
           </li>
           <li>
-            <h3>Lorem Ipsum Dolor </h3>
-            <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .</p>
+            <h3> Thousands of cover templates to choose from </h3>
+            <p>Never stay short of options! You can try it for FREE. Look no further if you need a free cover letter
+              template. </p>
           </li>
           <li>
-            <h3>Lorem Ipsum Dolor </h3>
-            <p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur .</p>
+            <h3> Easy to use </h3>
+            <p>All you need is the internet and some basic typing skills. Yes, it's dead simple. Browse-Edit -Download.
+              Get your cover letter in less than 5 minutes.
+            </p>
+          </li>
+          <li>
+            <h3> Most economical cover letter template builder </h3>
+            <p>All you pay is 5 USD. Invest in your career. We have flat pricing and no hidden costs. </p>
           </li>
         </ul>
       </div>
@@ -141,7 +141,7 @@
     </div>
   </div>
 </div>
-<div class="experts">
+<!-- <div class="experts">
   <div class="container p-5">
     <h2 class="font-weight-bold text-center text-white">What Experts say about us </h2>
     <div class="row">
@@ -152,139 +152,179 @@
       </owl-carousel-o>
     </div>
   </div>
-</div>
+</div> -->
 <div class="faq">
   <div class="container p-5">
-    <h2 class="font-weight-bold text-center">FAQs about Cover Letters</h2>
+    <h2 class="font-weight-bold text-center">Tricks and Tips: How to Make a Cover Letter</h2>
+    <p class="text-center">First impression is the last impression. A good professionally written cover letter surely
+      helps in leaving a positive impression about you in the minds of your future employer. There are tonnes of books,
+      blogs and videos on how to make cover sheet templates? You don't need to browse pages after pages to make a
+      perfect cover letter as Print CV practically tells you how to go about it and stand ahead of the race. </p>
+    <p class="text-center">Just choose a template - follow our tips - download and start applying.
+      So what makes a good cover letter? Just follow these 5 tips and you can make a perfect cover letter.
+    </p>
     <div class="row mt-5">
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my cover letter? </h5>
-        <p>Everyone’s cover letter will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your cover letter,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, cover letters must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> cover letter introduction</li>
-          <li> cover letter education section</li>
-          <li> Work experience</li>
-          <li> Relevant cover letter skills & certifications</li>
-        </ul>
+        <h5> What makes you a good candidate? </h5>
+        <p>You need to get into the employer's shoes. 99% of the companies do ask the following question in every
+          interview they conduct. </p>
+        <p>Why do you want to work with us? </p>
+        <p>
+          This is precisely something that you can answer in your cover letter. You need to know what job position you
+          are applying for.
+        </p>
+        <p> Just a couple of lines about why you wish to work with them will work wonders for you. </p>
+        <p>
+          A simple trick here is, just read the recruitment ad and study the skill sets and responsibilities your
+          employer is looking for. Simply relate yourself to the job you are applying for. </p>
+        <p>
+          This simple step will increase your chances by 37%. Yes, it's true! Print CV conducted a survey and here is
+          the finding. Click here.
+        </p>
       </div>
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my cover letter? </h5>
-        <p>Everyone’s cover letter will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your cover letter,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, cover letters must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> cover letter introduction</li>
-          <li> cover letter education section</li>
-          <li> Work experience</li>
-          <li> Relevant cover letter skills & certifications</li>
-        </ul>
+        <h5>Mind your words </h5>
+        <p>Know your industry well. You need to use industry lingo to make a good cover letter. Most candidates use
+          words which don't really sync well with industry standards in their cover letters. </p>
+        <p>
+          In a sales cover letter it is perfectly fine to say things like: Go - Getter, Hardworking, hit the ground
+          running etc. </p>
+        <p>
+          For some other jobs such as software engineer such words may not sync well with the cover letter. One may
+          consider words like discipline, multitasker and detailed oriented etc. as in case of making a cover letter for
+          a software engineer position. </p>
+        <p>
+          You should be well versed with your industry lingo and make use of those words in your cover letter.
+        </p>
       </div>
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my cover letter? </h5>
-        <p>Everyone’s cover letter will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your cover letter,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, cover letters must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> cover letter introduction</li>
-          <li> cover letter education section</li>
-          <li> Work experience</li>
-          <li> Relevant cover letter skills & certifications</li>
-        </ul>
+        <h5>Don't under or over sell </h5>
+        <p>When you are preparing a cover letter just ensure you don't boost off.
+          Some candidates over promise and a few do not talk much about themselves. Don't land up in a situation where
+          you cannot really back up your claims. Similarly don't be shy. Just be realistic.
+        </p>
       </div>
       <div class="col-md-6 pb-3">
-        <h5>What should I include on my cover letter? </h5>
-        <p>Everyone’s cover letter will include different things due to varying work experience
-          and qualifications. However, if you’re wondering what to put on your cover letter,
-          there are some basic requirements that you should include.</p>
-        <p>At a minimum, cover letters must have the following standard components: </p>
-        <ul>
-          <li>Contact information</li>
-          <li> cover letter introduction</li>
-          <li> cover letter education section</li>
-          <li> Work experience</li>
-          <li> Relevant cover letter skills & certifications</li>
-        </ul>
+        <h5>Write a professional cover letter </h5>
+        <p>Never use short forms or slang while preparing your cover letter. Words like: Kinda, etc, basically</p>
+        <p>
+          Idioms like:-So far so good, I was like</p>
+        <p>
+          Abbreviations like: - &, BTW </p>
+        <p>
+          Make sure you are professional throughout your cover letter. If you use slang the interviewer may feel you are
+          difficult to mould and not a professional candidate. Idioms may make your interviewer believe that you are
+          less sure about everything. </p>
+        <p>
+          The best cover letter template does not have such rookie mistakes.
+        </p>
       </div>
 
     </div>
   </div>
 </div>
-<div class="confused" style="background-image: url(assets/img/browse-ex-bg.svg);">
+
+<div class="what-is-cover-letter">
+  <div class="container p-5">
+    <h2 class="text-center mb-4">Structure your cover letter </h2>
+    <p class="lead">
+      The best cover letter generally has four main sections.
+    </p>
+    <p class="lead">
+
+      What to write in your cover letter? </p>
+    <p class="lead">
+
+      What to add in the first paragraph of your cover letter: Who you are? </p>
+    <p class="lead">
+
+      Just put your personal information and greeting to your employer. </p>
+    <p class="lead">
+
+      -What is the position you are applying for? </p>
+    <p class="lead">
+
+      - From where did you get information about the job you are applying for? </p>
+    <p class="lead">
+
+      What to add in the second paragraph of your cover letter: How can we work together? </p>
+    <p class="lead">
+
+      Simply sell yourself but remember don't over or under sell. Keep a couple of adjectives ready which describe you
+      in true sense and are industry specific. Don't forget the industry lingo here. </p>
+    <p class="lead">
+
+      Example </p>
+    <p class="lead">
+
+      I have excellent knowledge about the sales force and I am also a Zend certified engineer. I can understand
+      client's requirements quickly as I am a detail oriented individual. </p>
+    <p class="lead">
+
+      Now comes the third paragraph of your cover letter: Why this company? </p>
+    <p class="lead">
+
+      Try to check what company is doing off late and relate this to your career goals. Just don't make it sound very
+      obvious. </p>
+    <p class="lead">
+
+      Example: On a company's blog page you have found an article they will be working on financial applications along
+      with their current portfolio. </p>
+    <p class="lead">
+
+      You may write something that may connect the dots. Describe your achievements </p>
+    <p class="lead">
+
+      I have worked on financial applications as well. I had a very high success ratio and retention rate. </p>
+    <p class="lead">
+
+      Here you are trying to make a deal based on your past performances, achievements and interests. </p>
+    <p class="lead">
+
+      If you do not have something very specific which may connect the dots then add some achievements and interests.
+    </p>
+    <p class="lead">
+
+      If you are a fresher then write university or college level achievements which may match your employer's current
+      job brief. </p>
+    <p class="lead">
+
+      Fourth paragraph; How to sum up a cover letter? : Thank you, follow up and your personal details. </p>
+    <p class="lead">
+
+      Here you need to professionally request an interview, leave your professional details and ask the employer about
+      follow up.
+
+    </p>
+  </div>
+</div>
+
+
+
+<!-- <div class="confused" style="background-image: url(assets/img/browse-ex-bg.svg);">
   <div class="container p-5 text-white text-center">
     <h2 class="font-weight-bold ">Never settle for less than perfect </h2>
     <p class="text-center">Explore what other professionals put in their cover letters </p>
     <button class="btn m-3">Browse Cover Letter Examples </button>
   </div>
-</div>
+</div> -->
 <div class="faq-list">
   <div class="container pb-5 px-5">
     <h2>FAQs about Templates </h2>
     <div class="list shadow p-3">
       <div id="accordionExample">
-        <div>
-          <div id="headingOne">
-            <h6 class=" font-weight-bold">
-              <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </span>
-            </h6>
-          </div>
-          <div id="collapseOne" class="collapse" data-parent="#accordionExample">
-            <div class="">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
+        <div class="display-4 bg-danger text-center" *ngIf="!internet">
+          <i class="fa fa-exclamation-circle"></i> No internet
         </div>
-        <div>
-          <div id="headingTwo">
-            <h6 class=" font-weight-bold">
-              <span data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </span>
+        <div class="display-4 bg-warning text-center" *ngIf="!faqsList && internet">Loading...</div>
+        <div class="p-2 border-bottom border-light" *ngFor="let item of faqsList; index as i;">
+          <div id="heading{{i}}">
+            <h6 class="font-weight-bold m-0" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
+              {{item.question}} <i class="fa fa-angle-down float-right"></i>
             </h6>
           </div>
-          <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
-            <div class="">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div>
-          <div id="headingThree">
-            <h6 class=" font-weight-bold">
-              <span data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-                aria-controls="collapseThree">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              </span>
-            </h6>
-          </div>
-          <div id="collapseThree" class="collapse" data-parent="#accordionExample">
-            <div class="">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
+          <div id="collapse{{i}}" class="collapse" data-parent="#accordionExample">
+            <div class="">{{item.answer}} </div>
           </div>
         </div>
       </div>
