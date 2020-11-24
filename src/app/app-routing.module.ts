@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { CoverLetterComponent } from './pages/cover-letter/cover-letter.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ResumeExamplesComponent } from './pages/resume-examples/resume-examples.component';
 import { ResumeTemplateComponent } from './pages/resume-template/resume-template.component';
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'cover-letter',
     component: CoverLetterComponent
+  },
+  {
+    path:'resume-examples',
+    component: ResumeExamplesComponent
   },
   {
     path: '',

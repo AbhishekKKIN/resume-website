@@ -12,6 +12,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FooterComponent } from './components/footer/footer.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { ResumeExamplesComponent } from './pages/resume-examples/resume-examples.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     ResumeTemplateComponent,
     CoverLetterComponent,
-    FooterComponent
+    FooterComponent,
+    ResumeExamplesComponent
   ],
   imports: [
     BrowserModule,
