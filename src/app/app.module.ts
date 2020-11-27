@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ResumeExamplesComponent } from './pages/resume-examples/resume-examples.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ResumeExamplesComponent } from './pages/resume-examples/resume-examples
     ResumeTemplateComponent,
     CoverLetterComponent,
     FooterComponent,
-    ResumeExamplesComponent
+    ResumeExamplesComponent,
+    BlogComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,

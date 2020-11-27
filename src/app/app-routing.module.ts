@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { BlogComponent } from './pages/blog/blog.component';
 import { CoverLetterComponent } from './pages/cover-letter/cover-letter.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
 import { ResumeExamplesComponent } from './pages/resume-examples/resume-examples.component';
 import { ResumeTemplateComponent } from './pages/resume-template/resume-template.component';
 
@@ -20,8 +22,16 @@ const routes: Routes = [
     component: CoverLetterComponent
   },
   {
-    path:'resume-examples',
+    path: 'resume-examples',
     component: ResumeExamplesComponent
+  },
+  {
+    path: 'blog',
+    component: BlogComponent
+  },
+  {
+    path: 'pricing',
+    component: PricingComponent
   },
   {
     path: '',
