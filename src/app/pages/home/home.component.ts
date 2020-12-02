@@ -7,6 +7,7 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -36,6 +37,12 @@ import {
 })
 export class HomeComponent implements OnInit {
   isOpen = true;
+
+  customOptions: OwlOptions = {
+    loop: true,
+    items: 5,
+    center: true
+  }
 
 
   constructor() { }

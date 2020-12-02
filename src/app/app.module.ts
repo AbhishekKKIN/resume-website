@@ -15,6 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResumeExamplesComponent } from './pages/resume-examples/resume-examples.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './service/guards/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,16 +31,20 @@ import { PricingComponent } from './pages/pricing/pricing.component';
     FooterComponent,
     ResumeExamplesComponent,
     BlogComponent,
-    PricingComponent
+    PricingComponent,
+    AboutUsComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,7 +13,6 @@ export class PricingComponent implements OnInit {
   customOptions: OwlOptions = {
     loop: true,
     items: 1,
-    // nav: true,
   }
 
   constructor() { }

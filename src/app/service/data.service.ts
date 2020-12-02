@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DataService {
   APIEndpoint = '';
+  headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
     this.APIEndpoint = environment.baseUrl;
@@ -24,5 +25,14 @@ export class DataService {
     return this.http.get(this.APIEndpoint + 'faq/' + param);
   }
 
+  registration(param) {
+    return this.http.post(this.APIEndpoint + 'user/local/', param);
+  }
+
+  post(url, data) {
+    return this.http.post(this.APIEndpoint + url, data, {
+      headers: this.headers
+    });
+  }
 
 }
