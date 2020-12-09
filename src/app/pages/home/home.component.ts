@@ -44,6 +44,13 @@ export class HomeComponent implements OnInit {
     center: true
   }
 
+  worksOptions: OwlOptions = {
+    loop: true,
+    items: 1,
+    dots: true,
+    dotsData: true,
+    center: true
+  }
 
   constructor() { }
 

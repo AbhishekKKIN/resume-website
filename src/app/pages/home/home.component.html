@@ -124,38 +124,32 @@
   <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide>
       <div class="slide p-2">
-        <img src="assets/img/banner-image-01.jpg"
-          class="img-fluid rounded border">
+        <img src="assets/img/banner-image-01.jpg" class="img-fluid rounded border">
       </div>
     </ng-template>
     <ng-template carouselSlide>
       <div class="slide p-2">
-        <img src="assets/img/banner-image-01.jpg"
-          class="img-fluid rounded border">
+        <img src="assets/img/banner-image-01.jpg" class="img-fluid rounded border">
       </div>
     </ng-template>
     <ng-template carouselSlide>
       <div class="slide p-2">
-        <img src="assets/img/banner-image-01.jpg"
-          class="img-fluid rounded border">
+        <img src="assets/img/banner-image-01.jpg" class="img-fluid rounded border">
       </div>
     </ng-template>
     <ng-template carouselSlide>
       <div class="slide p-2">
-        <img src="assets/img/banner-image-01.jpg"
-          class="img-fluid rounded border">
+        <img src="assets/img/banner-image-01.jpg" class="img-fluid rounded border">
       </div>
     </ng-template>
     <ng-template carouselSlide>
       <div class="slide p-2">
-        <img src="assets/img/banner-image-01.jpg"
-          class="img-fluid rounded border">
+        <img src="assets/img/banner-image-01.jpg" class="img-fluid rounded border">
       </div>
     </ng-template>
     <ng-template carouselSlide>
       <div class="slide p-2">
-        <img src="assets/img/banner-image-01.jpg"
-          class="img-fluid rounded border">
+        <img src="assets/img/banner-image-01.jpg" class="img-fluid rounded border">
       </div>
     </ng-template>
   </owl-carousel-o>
@@ -179,7 +173,8 @@
     </div>
   </div>
 </div>
-<div class="started p-5 d-flex align-items-center flex-column text-white">
+<div class="started p-5 d-flex align-items-center flex-column text-white"
+  style="background-image: url(assets/img/writing-a-resume-bg.svg);">
   <h1>Templates that make you stand</h1>
   <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
     labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
@@ -274,9 +269,39 @@
 
 
 <div class="how-works p-5">
-  <div class="d-flex align-items-center flex-column text-white">
-    <h2 class="mb-3">How it works</h2>
-    <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-    <h4 class="my-3"> No matter what your experience level is simply browse through templates and cover letters. </h4>
-  </div>
+  <owl-carousel-o [options]="worksOptions">
+    <ng-template carouselSlide dotContent="1">
+      <div class="slide p-2">
+        <div class="d-flex align-items-center flex-column text-white">
+          <h2 class="mb-3">How it works</h2>
+          <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+          <h4 class="my-3">
+            No matter what your experience level is simply browse through templates and cover letters.
+          </h4>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide dotContent="2">
+      <div class="slide p-2">
+        <div class="d-flex align-items-center flex-column text-white">
+          <h2 class="mb-3">How it works</h2>
+          <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+          <h4 class="my-3">
+            Use smart CV writing suggestion tools.
+          </h4>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide dotContent="3">
+      <div class="slide p-2">
+        <div class="d-flex align-items-center flex-column text-white">
+          <h2 class="mb-3">How it works</h2>
+          <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+          <h4 class="my-3">
+            Edit your CV or Cover letter. Pay and Download.
+          </h4>
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
 </div>
