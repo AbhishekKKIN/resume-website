@@ -17,6 +17,10 @@ export class DataService {
     return this.http.get(this.APIEndpoint + 'base-templates');
   }
 
+  getTemplateById(param) {
+    return this.http.get(this.APIEndpoint + 'resume-variant?base_id=' + param)
+  }
+
   getCoverLetters() {
     return this.http.get(this.APIEndpoint + 'base-cover-letters');
   }

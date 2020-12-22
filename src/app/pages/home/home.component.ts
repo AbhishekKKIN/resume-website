@@ -62,7 +62,4 @@ export class HomeComponent implements OnInit {
     this.isOpen = !this.isOpen;
   }
 
-
-
-
 }

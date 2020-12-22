@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { DataService } from 'src/app/service/data.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-resume-template',
@@ -8,6 +9,9 @@ import { DataService } from 'src/app/service/data.service';
   styleUrls: ['./resume-template.component.sass']
 })
 export class ResumeTemplateComponent implements OnInit {
+  modalRef: BsModalRef;
+  resumeId;
+  resumePreview;
   resumeTemplateList;
   faqsList;
   internet = true;
@@ -16,29 +20,38 @@ export class ResumeTemplateComponent implements OnInit {
     nav: true
   }
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private modalService: BsModalService) { }
 
   ngOnInit(): void {
     this.getResumeTemplateList();
     this.getFaqsList('resume');
   }
+  previewTemplate(template: TemplateRef<any>, resumeId) {
+    this.resumePreview = null;
+    this.modalRef = this.modalService.show(template, resumeId);
+    this.resumeId = resumeId;
+    this.dataService.getTemplateById(resumeId).subscribe((data: any) => {
+      const items = data.data;
+      this.resumePreview = items.docs[0].images;
+    });
+  }
 
   getResumeTemplateList() {
-    // this.resumeTemplateList = [
-    //   { "image": "/uploads/base-templates-images/image-1604040601312-8909935.jpg", "description": "no description available", "_id": "5f9bb799a719b211b820f255", "title": "Basic", "template_name": "Basic", "template_type": "resume" },
-    //   { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template1-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabda1daca0b69fbbf55c47", "title": "Unnammed 1", "template_name": "Template1", "template_type": "resume" },
-    //   { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template2-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb07aca0b69fbbf55c48", "title": "Unnammed 2", "template_type": "resume", "template_name": "Template2" },
-    //   { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template3-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb16aca0b69fbbf55c49", "title": "Unnammed 3", "template_type": "resume", "template_name": "Template3" },
-    //   { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template4-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb20aca0b69fbbf55c4a", "title": "Unnammed 4", "template_type": "resume", "template_name": "Template4" },
-    //   { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template5-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb39aca0b69fbbf55c4b", "title": "Unnammed 5", "template_type": "resume", "template_name": "Template5" },
-    //   { "image": "/uploads/base-templates-images/image-1604040601312-8909935.jpg", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb43aca0b69fbbf55c4c", "title": "Unnammed 6", "template_type": "resume" }
-    // ]
-    this.dataService.getResumeTemplate().subscribe((data: any) => {
-      const items = data.data.docs;
-      this.resumeTemplateList = items;
-    }, (error) => {
-      console.log(error.message)
-    });
+    this.resumeTemplateList = [
+      { "image": "/uploads/base-templates-images/image-1604040601312-8909935.jpg", "description": "no description available", "_id": "5f9bb799a719b211b820f255", "title": "Basic", "template_name": "Basic", "template_type": "resume" },
+      { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template1-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabda1daca0b69fbbf55c47", "title": "Unnammed 1", "template_name": "Template1", "template_type": "resume" },
+      { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template2-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb07aca0b69fbbf55c48", "title": "Unnammed 2", "template_type": "resume", "template_name": "Template2" },
+      { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template3-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb16aca0b69fbbf55c49", "title": "Unnammed 3", "template_type": "resume", "template_name": "Template3" },
+      { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template4-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb20aca0b69fbbf55c4a", "title": "Unnammed 4", "template_type": "resume", "template_name": "Template4" },
+      { "image": "https://printcv.s3.us-east-2.amazonaws.com/Template5-min.png", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb39aca0b69fbbf55c4b", "title": "Unnammed 5", "template_type": "resume", "template_name": "Template5" },
+      { "image": "/uploads/base-templates-images/image-1604040601312-8909935.jpg", "description": "This is the Dummy Short Description of Resume Template", "_id": "5fabdb43aca0b69fbbf55c4c", "title": "Unnammed 6", "template_type": "resume" }
+    ]
+    // this.dataService.getResumeTemplate().subscribe((data: any) => {
+    //   const items = data.data.docs;
+    //   this.resumeTemplateList = items;
+    // }, (error) => {
+    //   console.log(error.message)
+    // });
   }
 
   getFaqsList(param) {
@@ -52,7 +65,6 @@ export class ResumeTemplateComponent implements OnInit {
   }
 
 
-  previewTemplate(param) {
-  }
+
 
 }

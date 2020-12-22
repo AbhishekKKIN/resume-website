@@ -43,19 +43,44 @@
           <img class="img-fluid" src="{{item.image}}" alt="{{item.image}}">
           <div class="hover position-absolute h-100 w-100 row flex-column justify-content-center align-items-center">
             <button class="btn" data-toggle="modal" data-target="#exampleModal"
-              (click)="previewTemplate(item._id)">Preview</button>
+              (click)="previewTemplate(template, item._id)">Preview</button>
             <button class="btn mt-3">Use template</button>
           </div>
         </div>
       </div>
 
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+
+      <ng-template #template>
+        <div class="modal-header">
+          <h5 class="modal-title">Preview</h5>
+          <button class="btn text-uppercase">customize now </button>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+            <li class="nav-item" *ngFor="let preview of resumePreview; index as i; ">
+              <a class="nav-link active" id="{{i}}-tab" data-toggle="tab" href="#{{i}}" role="tab" aria-controls="{{i}}"
+                aria-selected="true"></a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div *ngFor="let preview of resumePreview; index as i; " class="tab-pane fade show active" id="{{i}}" role="tabpanel" aria-labelledby="{{i}}-tab">
+             <img class="img-fluid border" src="{{preview.url}}" alt="">
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Preview</h5>
-              <button class="btn text-uppercase">customize now</button>
+              <button class="btn text-uppercase">customize now </button>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -89,11 +114,10 @@
                     alt="">
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
     <div class="row justify-content-center mt-4">
@@ -101,6 +125,7 @@
     </div>
   </div>
 </div>
+
 
 
 <!-- <div class="what-is-resume">
